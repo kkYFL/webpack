@@ -1,0 +1,29 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --config webpack.dev.config.js",
+    "start": "webpack-dev-server --config webpack.dev.conf.js --color --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkYFL/webpack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kkYFL/webpack/issues"
+  },
+  "homepage": "https://github.com/kkYFL/webpack#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "wepack-cli": "^0.0.1-security"
+  }
+}
