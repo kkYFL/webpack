@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const open = require('opn');//打开浏览器
+const chalk = require('chalk');// 改变命令行中输出日志颜色插件
 
 module.exports = {
     // 入口文件配置项
@@ -27,6 +29,15 @@ module.exports = {
         historyApiFallback: true,
         host: '0.0.0.0',
         overlay:true,
+        after() {
+            open('http://localhost:' + this.port)
+            .then(() => {
+                console.log(chalk.cyan('成功打开链接： http://localhost:' + this.port));
+            })
+            .catch(err => {
+                console.log(chalk.red(err));
+            });
+        }
     }
 };
 
