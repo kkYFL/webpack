@@ -22,7 +22,8 @@ module.exports = {
             title:'webpack-主页',//配置生成页面的标题
         }),
     ],
-        // 开发服务配置项
+    
+    // 开发服务配置项
     devServer: {
         port: 8080,
         contentBase: path.resolve(__dirname, 'dist'),
@@ -38,6 +39,29 @@ module.exports = {
                 console.log(chalk.red(err));
             });
         }
-    }
-};
+    },
+
+
+    // 加载器 loader 配置项
+    module:{
+        rules:[
+            {
+                test: /\.css$/,
+                use: [{
+                        loader: 'style-loader'
+                    },{
+                        loader: 'css-loader'
+                    },{
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true,
+                            config: {
+                                path: 'postcss.config.js'
+                            }
+                        }
+                    }
+                ]
+            }]
+        },
+    };
 

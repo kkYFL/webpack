@@ -20,12 +20,21 @@
   },
   "homepage": "https://github.com/kkYFL/webpack#readme",
   "devDependencies": {
+    "autoprefixer": "^9.8.6",
     "chalk": "^4.1.0",
+    "css-loader": "^4.2.2",
     "html-webpack-plugin": "^4.3.0",
     "opn": "^6.0.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "wepack-cli": "^0.0.1-security"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
